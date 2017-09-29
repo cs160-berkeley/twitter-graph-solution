@@ -1,0 +1,50 @@
+/* CSS declarations go here */
+
+body {
+    font-family: sans-serif;
+    padding: 0.5em 2.5em;
+    max-width: 100vw;
+}
+
+#login-buttons {
+    border: dotted black 1px;
+    border-radius: 0.5em;
+    padding: 0.5em;
+}
+
+a, a:visited {
+    color: blue;
+}
+
+div#viz {
+    padding: 1em;
+}
+
+div.friend {
+    padding: 0.2em;
+}
+
+div.current_user {
+    background-color: lightgrey;
+}
+
+/* visualizations */
+
+svg {
+    border: dotted black 1px;
+    border-radius: 0.5em;
+}
+
+.link {
+    stroke: #aaa;
+}
+
+.node text {
+    stroke: #333;
+    cursor: pointer;
+}
+
+.node circle{
+    stroke-width: 3px;
+    stroke: #fff;
+}

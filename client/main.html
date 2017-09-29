@@ -1,0 +1,65 @@
+<head>
+  <meta charset="UTF-8">
+  <title>A3: Starting with APIs </title>
+  <script src="https://d3js.org/d3.v2.min.js?2.9.3"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <meta charset="utf-8">
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</head>
+
+<body>
+  <h2>A3: Starting with APIs </h2>
+
+  {{> loginButtons}} <br/>
+
+  {{#if currentUser}}
+  {{> main}}
+  {{else}}
+  <p> Not logged in. </p>
+  {{/if}}
+</body>
+
+<template name="main">
+  <p>User:
+    <a href="{{ ulink }}" target="_blank"> {{ sName }}</a>
+  </p>
+
+  <button id="submit" class="btn blue waves-effect waves-light">
+    PULL
+  </button>
+
+  <button id="view" class="btn blue waves-effect waves-light">
+    VIEW
+  </button>
+
+  <button id="erase" class="btn red waves-effect waves-light">
+    CLEAR
+  </button>
+
+  <!--only show data once we have fetched it from twitter-->
+
+  {{#if users}}
+  <h4> Fetched Users </h4>
+  {{#each users }}
+  {{> user }}
+  {{/each}}
+  {{> viz}}
+  {{/if}}
+</template>
+
+<template name="user">
+  <div class="user {{#if this.current_user}}current_user{{/if}}">
+    <a href="{{ uLink }}" style="color:#{{ this.profile_link_color }};"
+      target="_blank">{{ uName }}</a>: {{ uStatus }}
+  </div>
+</template>
+
+<template name="viz">
+  <h4> Visualization </h4>
+  <div id="viz"></div>
+</template>
