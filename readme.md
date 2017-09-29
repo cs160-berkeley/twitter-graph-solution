@@ -1,11 +1,15 @@
 # assignment 3, cs 160, fall 2017
 
-this is the staff solution repo for assignment 3.
+![demo](https://i.imgur.com/Ddt6tBP.gif)
 
-[assignment document](https://docs.google.com/document/d/1zmvlGO5PD1oi0q1kFFE6l0wZOqwDeVw71w-t0LrFmIw)
+this is the staff solution repo for [assignment 3][a3].
+
+
+### setup
 
 - local: `meteor npm i && meteor`
 - cloud9: `meteor npm i && ./start`
+
 
 ### files
 
@@ -27,3 +31,5 @@ this is the staff solution repo for assignment 3.
 
 3 directories, 10 files
 ```
+
+[a3]:https://docs.google.com/document/d/1zmvlGO5PD1oi0q1kFFE6l0wZOqwDeVw71w-t0LrFmIw
